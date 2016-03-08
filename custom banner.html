@@ -6,17 +6,42 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
       $(function(){
+       $('button').click(function(){
        
+        var Name = $('#name').val();
+        var Age = $('#age').val();
+        var  Sport = $('#sport').val();
+        var Color = $('#color').val();
+        
+        var story = "This is" + Name + "he is" + Age + ". " +
+                    Name + "favorite sport is" + Sport + ", " + Name + "favorite color is"
+                    + Color + ".";
+                    
+       
+         
+       });
         
       });
       
       
       
   </script>
+  
+  <style>
+     #MyProject{
+      background-color: red;
+      color: white;
+      width:400px;
+    }
+  </style>
   </head>
   <body>
+    <div id="MyProject">
   <h1>Name: <input id="name"><br></h1>
-  <h2>Age: <input id="age"><br></h2>
-  
+    Age: <input id="age"><br>
+     Sport: <input id="sport"><br>
+    Color: <input id="color"><br>
+    <button> Make Story</button>
+    <p></p>
   </body>
 </html>

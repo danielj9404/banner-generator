@@ -6,16 +6,29 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
       $(function(){
-       $('button').click(function(){
+       $('story').click(function(){
+           $('#toRed').click(function(){ 
+        $('div').css('background-color', 'red');
+           });
+           $('#toBlue').click(function(){
+         $('div').css('background-color','blue');
+           });
+           $('#toGreen').click(function(){
+        $('div').css('background-color','green');
+      });
+      $('#toPurple').click(function(){
+          $('div').css('background-color','purple');
+      });
+      
        
         var Name = $('#name').val();
         var Age = $('#age').val();
         var  Sport = $('#sport').val();
-        var Color = $('#color').val();
+        var  School = $('#school').val();
         
         var story = "This is" + Name + "he is" + Age + ". " +
-                    Name + "favorite sport is" + Sport + ", " + Name + "favorite color is"
-                    + Color + ".";
+                    Name + "favorite sport is" + Sport + ", " + Name + "goes to"
+                  + School +  ".";
                     
        
          
@@ -29,19 +42,24 @@
   
   <style>
      #MyProject{
-      background-color: red;
+      background-color: black;
       color: white;
       width:400px;
     }
   </style>
   </head>
   <body>
-    <div id="MyProject">
+          <div id="MyProject">
   <h1>Name: <input id="name"><br></h1>
     Age: <input id="age"><br>
      Sport: <input id="sport"><br>
-    Color: <input id="color"><br>
-    <button> Make Story</button>
-    <p></p>
+      School: <input id="school"><br>
+    <story>Make</story>
+      <p></p>
+  <button id="toRed">Red!</button>
+  <button id="toBlue">Blue!</button>
+  <button id="toGreen">Green</button>
+  <button id="toPurple">Purple</button>
+  <div> Pick a color</div>
   </body>
 </html>

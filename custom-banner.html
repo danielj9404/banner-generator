@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      $('#toRed').click(function() {
+        $('div').css('background-color', 'red');
+      });
+      $('#toBlue').click(function() {
+        $('div').css('background-color', 'blue');
+      });
+      $('#toGreen').click(function() {
+        $('div').css('background-color', 'green');
+      });
+      $('#toPurple').click(function() {
+        $('div').css('background-color', 'purple');
+      });
+
+    $('button').click(function(){
+      var petchange = $('#petChange').val();
+     $('input').css('background-color',petchange);
+       $('#petMirror').val(petchange);
+    
+     });
+    
+    });
+  </script>
+
+  <style>
+    #MyProject {
+      background-color: black;
+      color: white;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+   <div id="MyProject">
+     <h1>Type your favorite pet on the text below!</h1>
+     <h2> </h2>
+     <input id='petChange'>
+     <button id='Change Pet'>Change pet</button>
+     <input id="petMirror">
+    <br></br>
+    <button id="toRed">Red!</button>
+    <button id="toBlue">Blue!</button>
+    <button id="toGreen">Green</button>
+    <button id="toPurple">Purple</button>
+  </body>
+
+</html>
